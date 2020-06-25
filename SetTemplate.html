@@ -1,0 +1,135 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function printSet(setX) {
+			//Add SetID, class and date and number of participants to table
+			var head = document.getElementById("setData");
+			
+			var row = head.insertRow(1);
+			
+			var idCell = row.insertCell(0);
+			idCell.innerHTML = setX.id
+			
+			var classCell = row.insertCell(1);
+			classCell.innerHTML = setX.participants[0].Gender;
+			
+			var dateCell = row.insertCell(2);
+			dateCell.innerHTML = setX.date.toLocaleDateString();
+			
+			var nCell = row.insertCell(3);
+			nCell.innerHTML = setX.size();
+			
+			//Now add participants into the svg form
+			for(int i = 0; i < setX.size(); i++) {
+				txt = document.getElementById("txt" + i);
+				participant = setX.participant[i];
+				txt.textContent = participant.ID + "/n" + participant.Belt;
+			}
+		}
+		
+		function saveSet() {
+			//ToDo: find way of saving the completed form as a new html document.
+		}
+	</script>
+</head>
+<body>
+	<table id="setData" style="width:100%">
+		<tr>
+			<th> Set </th>
+			<th> Class </th>
+			<th> Date </th>
+			<th> Number of Participants </th>
+		</tr>
+	</table>
+	
+	<svg id="mySVG" width="1124" height="1124">
+		<g>
+			<rect id="rect14" x="0" y="0" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+			<text id="txt0" x="150" y="50" dominant-baseline="middle" text-anchor = "middle" fill="black"></text>
+		</g>
+		
+		<g>
+			<rect id="rect13" x="0" y="120" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+			<text id="txt1" x="150" y="170" dominant-baseline="middle" text-anchor = "middle" fill="black"></text>
+		</g>
+		
+		<g>
+			<rect id="rect12" x="0" y="300" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+			<text id="txt2" x="150" y="350" dominant-baseline="middle" text-anchor = "middle" fill="black"></text>
+		</g>
+			
+		</g>	
+			<rect id="rect11" x="0" y="420" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+			<text id="txt3" x="150" y="470" dominant-baseline="middle" text-anchor = "middle" fill="black"></text>
+		</g>
+		
+		<g>
+			<rect id="rect10" x="0" y="600" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+			<text id="txt4" x="150" y="650" dominant-baseline="middle" text-anchor = "middle" fill="black"></text>
+		</g>
+		
+		<g>
+			<rect id="rect9" x="0" y="720" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+			<text id="txt5" x="150" y="770" dominant-baseline="middle" text-anchor = "middle" fill="black"></text>
+		</g>
+		
+		<g>
+			<rect id="rect8" x="0" y="900" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+			<text id="txt6" x="150" y="950" dominant-baseline="middle" text-anchor = "middle" fill="black"></text>
+		</g>
+		
+		<g>
+			<rect id="rect7" x="0" y="1020" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+			<text id="txt7" x="150" y="1070" dominant-baseline="middle" text-anchor = "middle" fill="black"></text>
+		</g>
+		
+		<rect id="rect6" x="400" y="150" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+		
+		<rect id="rect5" x="400" y="270" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+		
+		<rect id="rect4" x="400" y="750" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+		
+		<rect id="rect3" x="400" y="870" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+		
+		<rect id="rect2" x="800" y="450" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+		
+		<rect id="rect1" x="800" y="570" width="300" height="100" style="fill:rgb(255,255,255);stroke-width:3;stroke:rgb(0,0,0)" />
+		
+		<path d="M 300 50 l 50 0 l 0 60 l 50 90" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		<path d="M 300 170 l 50 0 l 0 -60 l 50 90" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		
+		<path d="M 300 350 l 50 0 l 0 60 l 50 -90" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		<path d="M 300 470 l 50 0 l 0 -60 l 50 -90" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		
+		<path d="M 300 650 l 50 0 l 0 60 l 50 90" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		<path d="M 300 770 l 50 0 l 0 -60 l 50 90" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		
+		<path d="M 300 950 l 50 0 l 0 60 l 50 -90" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		<path d="M 300 1070 l 50 0 l 0 -60 l 50 -90" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		
+		<path d="M 700 200 l 50 0 l 0 60 l 50 240" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		<path d="M 700 320 l 50 0 l 0 -60 l 50 240" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		
+		<path d="M 700 800 l 50 0 l 0 60 l 50 -240" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		<path d="M 700 920 l 50 0 l 0 -60 l 50 -240" stroke="rgb(0,0,0)" stroke-width="3" fill="none" />
+		
+	</svg>
+	
+	<table id="podium" style="width:100%">
+		<tr>
+			<th> Rank </th>
+			<th> ID </th>
+			<th> Points Total </th>
+		</tr>
+		<tr>
+			<td> 1st </td>
+		</tr>
+		<tr>
+			<td> 2nd </td>
+		</tr>
+		<tr>
+			<td> 3rd </td>
+		</tr>
+	</table>
+</body>
+</html>

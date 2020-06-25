@@ -175,7 +175,7 @@ aMA = divideByBMI(aM1).sort_values('Set', ascending=True)
 aMA.Set = "aMA" + aMA.Set
 
 aMB = divideByBMI(aM2).sort_values('Set', ascending=True)
-aMA.Set = "tMB" + aMB.Set
+aMB.Set = "aMB" + aMB.Set
 
 vFA = divideByBMI(vF1).sort_values('Set', ascending=True)
 vFA.Set = "vFA" + vFA.Set
